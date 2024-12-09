@@ -3,10 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MosqueraAnthonny_ProyectoAvance2.InicioPage"
              Title="InicioPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Label 
+                Text="Bienvenido a tu Diario de Notas"
+                FontSize="28"
+                FontAttributes="Bold"
+                TextColor="#333"
+                HorizontalOptions="Center" />
+            <Label 
+                Text="Esta aplicación te permite crear y gestionar tus notas diarias de manera sencilla y organizada. Puedes añadir nuevas notas, ver las notas existentes con sus fechas y horas de creación, y mantener un registro de tus pensamientos y actividades diarias."
+                FontSize="18"
+                TextColor="#555"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center" />
+            <Label 
+                Text="Características:"
+                FontSize="22"
+                FontAttributes="Bold"
+                TextColor="#333"
+                HorizontalOptions="Start" />
+            <Label 
+                Text="• Crear nuevas notas fácilmente.\n• Ver todas tus notas con fecha y hora.\n• Interfaz intuitiva y fácil de usar."
+                FontSize="18"
+                TextColor="#555"
+                HorizontalOptions="Start" />
+            <Label 
+                Text="¡Empieza a usar tu diario de notas hoy mismo y organiza tus pensamientos de manera eficiente!"
+                FontSize="18"
+                FontAttributes="Italic"
+                TextColor="#333"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

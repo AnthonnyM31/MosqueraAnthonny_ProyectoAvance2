@@ -7,9 +7,24 @@
     Shell.FlyoutBehavior="Disabled"
     Title="MosqueraAnthonny_ProyectoAvance2">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <Shell.FlyoutHeader>
+        <Label Text="Mi Navegación"
+               FontSize="24"
+               HorizontalOptions="Center" />
+    </Shell.FlyoutHeader>
+
+
+    <TabBar>
+        <ShellContent Title="Inicio" Icon="inicio.png"
+                      ContentTemplate="{DataTemplate local:InicioPage}" />
+        <ShellContent Title="Acerca de" Icon="icon_about.png"
+                ContentTemplate="{DataTemplate local:AboutPage}" />
+        <ShellContent Title="Notas" Icon="icon_notes.png"
+                      ContentTemplate="{DataTemplate local:DiarioPage}" />
+        <ShellContent Title="VerNotas" Icon="view.png"
+                      ContentTemplate="{DataTemplate local:VerDiario}" />
+    </TabBar>
+
+
 
 </Shell>
