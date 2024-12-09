@@ -6,30 +6,30 @@
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="15">
             <Label 
-                Text="Bienvenido a tu Diario de Notas"
+                Text="Bienvenido a tu Diario Personal"
                 FontSize="28"
                 FontAttributes="Bold"
                 TextColor="#333"
                 HorizontalOptions="Center" />
             <Label 
-                Text="Esta aplicación te permite crear y gestionar tus notas diarias de manera sencilla y organizada. Puedes añadir nuevas notas, ver las notas existentes con sus fechas y horas de creación, y mantener un registro de tus pensamientos y actividades diarias."
+                Text="Tu viaje de autoconocimiento comienza aquí. Con esta aplicación, podrás registrar tus pensamientos, emociones y actividades diarias mientras construyes una racha que te dará puntos con cada actualización. ¡Haz de tu diario una rutina y mantén la motivación!"
                 FontSize="18"
                 TextColor="#555"
                 HorizontalOptions="Center"
                 HorizontalTextAlignment="Center" />
             <Label 
-                Text="Características:"
+                Text="¿Qué puedes hacer?"
                 FontSize="22"
                 FontAttributes="Bold"
                 TextColor="#333"
                 HorizontalOptions="Start" />
             <Label 
-                Text="• Crear nuevas notas fácilmente.\n• Ver todas tus notas con fecha y hora.\n• Interfaz intuitiva y fácil de usar."
+                Text="• Escribe en tu diario todos los días y gana puntos por cada actualización.\n• Lleva un registro completo de todas tus entradas en orden cronológico.\n• Con cada 5 actualizaciones, verás cómo tu racha de puntos te motiva a seguir escribiendo."
                 FontSize="18"
                 TextColor="#555"
                 HorizontalOptions="Start" />
             <Label 
-                Text="¡Empieza a usar tu diario de notas hoy mismo y organiza tus pensamientos de manera eficiente!"
+                Text="¡Comienza a escribir hoy mismo y crea una racha que te impulse a mantener tu hábito diario de reflexión y organización!"
                 FontSize="18"
                 FontAttributes="Italic"
                 TextColor="#333"
