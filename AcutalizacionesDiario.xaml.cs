@@ -32,7 +32,7 @@ public partial class AcutalizacionesDiario : ContentPage
 
             await App.Database.GuardarNotaAsync(nuevoDiario);
 
-            await DisplayAlert("Nota Guardada", "Tu nota ha sido guardada con éxito.", "OK");
+            await DisplayAlert("Actualización Guardada", "Tu diario ha sido actualizado con éxito.", "OK");
             await Navigation.PopAsync();
         }
         else

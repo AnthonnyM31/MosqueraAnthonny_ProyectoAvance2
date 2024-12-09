@@ -4,14 +4,14 @@
              x:Class="MosqueraAnthonny_ProyectoAvance2.VerDiario"
              Title="VerDiario">
     <VerticalStackLayout Padding="10">
-        <Label Text="Listado de Notas Guardadas" FontSize="24" FontAttributes="Bold" />
+        <Label Text="Listado de Actualizaciones" FontSize="24" FontAttributes="Bold" />
 
 
-        <Button Text="Recargar Notas" Clicked="RecargarNotas_Clicked" />
+        <Button Text="Recargar Actualizaciones" Clicked="RecargarActualizaciones_Clicked" />
 
-        <!-- Lista de notas -->
+        <!-- fghfgh -->
 
-        <CollectionView ItemsSource="{Binding Notas}">
+        <CollectionView ItemsSource="{Binding DiariosList}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Frame Padding="10" Margin="5" BorderColor="Gray">

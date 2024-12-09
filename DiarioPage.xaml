@@ -4,7 +4,7 @@
              x:Class="MosqueraAnthonny_ProyectoAvance2.DiarioPage"
              Title="DiarioPage">
     <VerticalStackLayout>
-        <CollectionView ItemsSource="{Binding Notas}">
+        <CollectionView ItemsSource="{Binding DiariosList}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Frame Padding="10" Margin="5" BorderColor="Gray">
@@ -16,6 +16,6 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <Button Text="Agregar Nota" Clicked="AgregarNota_Clicked" />
+        <Button Text="Actualizar Diario" Clicked="AgregarNota_Clicked" />
     </VerticalStackLayout>
 </ContentPage>

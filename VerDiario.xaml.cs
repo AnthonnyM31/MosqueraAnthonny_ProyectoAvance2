@@ -16,7 +16,7 @@ public partial class VerDiario : ContentPage
         BindingContext = this;
     }
 
-    private async void RecargarNotas_Clicked(object sender, EventArgs e)
+    private async void RecargarActualizaciones_Clicked(object sender, EventArgs e)
     {
         await CargarNotas();
     }
