@@ -23,7 +23,24 @@ public partial class DiarioPage : ContentPage
         public string? Titulo { get; set; }
         public string? Contenido { get; set; }
         public DateTime FechaHora { get; set; } = DateTime.Now;
+
+        public static int TotalActualizaciones { get; set; } = 0;
+        public static int Puntos { get; set; } = 0;
     }
+
+
+  
+  
+
+    public class Configuracion
+    {
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+        public int TotalActualizaciones { get; set; }
+        public int Puntos { get; set; }
+    }
+
+
 
 
     private async void CargarNotas()

@@ -32,6 +32,18 @@ public partial class AcutalizacionesDiario : ContentPage
 
             await App.Database.GuardarNotaAsync(nuevoDiario);
 
+            // Incrementar actualizaciones y calcular puntos
+            var config = await App.Database.ObtenerConfiguracionAsync();
+            config.TotalActualizaciones++;
+
+            if (config.TotalActualizaciones % 5 == 0)
+            {
+                config.Puntos += 100;
+                await DisplayAlert("¡Felicidades!", "Has ganado 100 puntos.", "OK");
+            }
+
+            await App.Database.GuardarConfiguracionAsync(config);
+
             await DisplayAlert("Actualización Guardada", "Tu diario ha sido actualizado con éxito.", "OK");
             await Navigation.PopAsync();
         }
@@ -40,5 +52,6 @@ public partial class AcutalizacionesDiario : ContentPage
             await DisplayAlert("Error", "Por favor, completa todos los campos.", "OK");
         }
     }
+
 
 }

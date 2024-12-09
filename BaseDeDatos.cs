@@ -14,7 +14,32 @@ public class BaseDeDatos
     {
         _database = new SQLiteAsyncConnection(dbPath);
         _database.CreateTableAsync<Diario>().Wait();
+        _database.CreateTableAsync<Configuracion>().Wait();
     }
+
+
+
+    //solo para el sistema de puntos
+
+    public async Task<Configuracion> ObtenerConfiguracionAsync()
+    {
+        var config = await _database.Table<Configuracion>().FirstOrDefaultAsync();
+        if (config == null)
+        {
+            config = new Configuracion { TotalActualizaciones = 0, Puntos = 0 };
+            await _database.InsertAsync(config);
+        }
+        return config;
+    }
+
+    // se actualizazn los puntos
+    public Task<int> GuardarConfiguracionAsync(Configuracion config)
+    {
+        return _database.UpdateAsync(config);
+    }
+
+    //----------------------------------------------------------------------------------------------
+
 
     public Task<List<Diario>> ObtenerNotasAsync()
     {

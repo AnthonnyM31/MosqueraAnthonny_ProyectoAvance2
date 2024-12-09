@@ -8,10 +8,9 @@
         public App()
         {
             InitializeComponent();
-            MainPage = new AppShell();
+            MainPage = new QuienEres();
             string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "notas.db3");
             Database = new BaseDeDatos(dbPath);
-
 
         }
     }

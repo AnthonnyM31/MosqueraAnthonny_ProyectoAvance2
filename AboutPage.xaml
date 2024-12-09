@@ -2,18 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MosqueraAnthonny_ProyectoAvance2.AboutPage"
-             Title="AboutPage">
-    
+             Title="Acerca de">
     <StackLayout Padding="20">
-        <Label Text="Anthonny Mosquera"
-               FontSize="24"
-               HorizontalOptions="Center" />
-        <Label Text="Soy un estudiante de Ingeniería de Software..."
-               FontSize="18"
-               HorizontalOptions="Center" />
-        <Image Source="yo.png"
-               HeightRequest="100"
-               WidthRequest="100"
-               HorizontalOptions="Center" />
+        <Label x:Name="NombreUsuarioLabel" FontSize="Large" FontAttributes="Bold" />
+        <Label x:Name="ActualizacionesLabel" FontSize="Medium" />
+        <Label x:Name="PuntosLabel" FontSize="Medium" />
     </StackLayout>
 </ContentPage>
