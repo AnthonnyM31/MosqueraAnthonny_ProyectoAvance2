@@ -6,11 +6,12 @@ public partial class VerDiario : ContentPage
 	{
 		InitializeComponent();
 	}
-    public List<NuevaNotaPage.Nota> Notas { get; set; }
+   
+    public List<DiarioPage.Diario> DiariosList { get; set; }
 
     private async Task CargarNotas()
     {
-        Notas = await App.Database.ObtenerNotasAsync();
+        DiariosList = await App.Database.ObtenerNotasAsync();
         BindingContext = null; // Reinicia el contexto para refrescar la UI
         BindingContext = this;
     }

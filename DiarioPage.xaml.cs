@@ -1,24 +1,40 @@
+using SQLite;
+
 namespace MosqueraAnthonny_ProyectoAvance2;
 
 public partial class DiarioPage : ContentPage
 {
-    public NotasPage()
+    public DiarioPage()
     {
         InitializeComponent();
         CargarNotas();
     }
 
-    public List<NuevaNotaPage.Nota> Notas { get; set; }
+    public List<DiarioPage.Diario> DiariosList { get; set; }
+
+
+
+    public class Diario
+    {
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+
+        //si no están marcadas como opcionales o requeridas no se por que pero no funciona asi que vamos a permitir valores null
+        public string? Titulo { get; set; }
+        public string? Contenido { get; set; }
+        public DateTime FechaHora { get; set; } = DateTime.Now;
+    }
+
 
     private async void CargarNotas()
     {
-        Notas = await App.Database.ObtenerNotasAsync();
+        DiariosList = await App.Database.ObtenerNotasAsync();
         BindingContext = null; // Reinicia el contexto para refrescar la UI
         BindingContext = this;
     }
 
     private async void AgregarNota_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new NuevaNotaPage());
+        await Navigation.PushAsync(new AcutalizacionesDiario());
     }
 }

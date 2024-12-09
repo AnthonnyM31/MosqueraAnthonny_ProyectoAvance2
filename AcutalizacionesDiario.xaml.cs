@@ -1,5 +1,5 @@
 using SQLite;
-
+using static MosqueraAnthonny_ProyectoAvance2.DiarioPage;
 namespace MosqueraAnthonny_ProyectoAvance2;
 
 public partial class AcutalizacionesDiario : ContentPage
@@ -8,19 +8,6 @@ public partial class AcutalizacionesDiario : ContentPage
 	{
 		InitializeComponent();
 	}
-    public class Nota
-    {
-        [PrimaryKey, AutoIncrement]
-        public int Id { get; set; }
-
-        //si no están marcadas como opcionales o requeridas no se por que pero no funciona asi que vamos a permitir valores null
-        public string? Titulo { get; set; }
-        public string? Contenido { get; set; }
-        public DateTime FechaHora { get; set; } = DateTime.Now;
-    }
-
-
-
 
 
 
@@ -36,14 +23,14 @@ public partial class AcutalizacionesDiario : ContentPage
 
         if (!string.IsNullOrWhiteSpace(titulo) && !string.IsNullOrWhiteSpace(contenido))
         {
-            var nuevaNota = new Nota
+            var nuevoDiario = new Diario
             {
                 Titulo = titulo,
                 Contenido = contenido,
                 FechaHora = DateTime.Now
             };
 
-            await App.Database.GuardarNotaAsync(nuevaNota);
+            await App.Database.GuardarNotaAsync(nuevoDiario);
 
             await DisplayAlert("Nota Guardada", "Tu nota ha sido guardada con éxito.", "OK");
             await Navigation.PopAsync();
